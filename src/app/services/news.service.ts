@@ -1,9 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { NewsResponse } from '../interfaces';
+const apiKey = environment.apiKey;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NewsService {
 
@@ -11,6 +13,6 @@ export class NewsService {
 
   getNewsData()  {
     // eslint-disable-next-line max-len
-    return this.http.get<NewsResponse>('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=6e40701d83754b7284c9b6368d0be38c');
+    return this.http.get<NewsResponse>(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`);
   }
 }

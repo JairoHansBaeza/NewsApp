@@ -1,0 +1,19 @@
+<ion-grid fixed>
+  <ion-row>
+    <ion-col>
+      <ion-card *ngFor="let article of articles, let i = index">
+        <ion-card-subtitle>
+          <ion-row>
+            <ion-col>
+              <span>{{i+1}}<br></span>
+              <span>{{article.source.name}}</span>
+            </ion-col>
+          </ion-row>
+        </ion-card-subtitle>
+        <ion-title>{{article.title}}</ion-title>
+        <ion-img src="{{article.urlToImage}}"></ion-img>
+        <ion-card-content><p>{{article.description}}</p></ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
