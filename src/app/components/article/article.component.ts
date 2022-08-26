@@ -7,10 +7,13 @@ import { Article } from 'src/app/interfaces';
   styleUrls: ['./article.component.scss'],
 })
 export class ArticleComponent implements OnInit {
-  @Input() article:Article;
-  @Input() index:number;
+  @Input() article: Article;
+  @Input() index: number;
   constructor() { }
 
   ngOnInit() {}
 
+  openArticle() {
+    window.open(this.article.url,'_blank');
+  }
 }

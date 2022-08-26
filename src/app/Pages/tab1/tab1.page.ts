@@ -10,7 +10,7 @@ import { NewsService } from 'src/app/services/news.service';
 })
 export class Tab1Page implements OnInit{
 
-  @ViewChild(IonInfiniteScroll,{static:true}) infiniteScroll;
+  @ViewChild(IonInfiniteScroll,{static:true}) infiniteScroll: IonInfiniteScroll;
 
   public articles: Article[]=[];
   page = 1;

@@ -13,11 +13,21 @@ export class NewsService {
 
   constructor(private http: HttpClient) { }
 
-  getNewsData(page:number)  {
+  getNewsData(page: number)  {
     return this.http.get<NewsResponse>(`${urlBase}/top-headlines`,{
       params:{
       country:'us',
       category:'business',
+      apiKey:apiKey,
+      page:page
+      }
+    });
+  }
+  getNewsDataByCategory(page: number,category: string)  {
+    return this.http.get<NewsResponse>(`${urlBase}/top-headlines`,{
+      params:{
+      country:'us',
+      category:category,
       apiKey:apiKey,
       page:page
       }
