@@ -1,9 +1,14 @@
 <ion-card>
   <ion-card-subtitle class="ion-margin" >
-    <ion-row class="ion-align-items-center" (click)="openArticle()">
-      <ion-col class="">
-        <span class="text-primary">{{index+1}}<br></span>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="9" (click)="openArticle()">
+        <span class="text-primary">{{index+1}}.<br></span>
         <span class="article-source-name">{{article.source.name}}</span>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="openMenu()" fill="clear">
+          <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+        </ion-button>
       </ion-col>
     </ion-row>
   </ion-card-subtitle>
