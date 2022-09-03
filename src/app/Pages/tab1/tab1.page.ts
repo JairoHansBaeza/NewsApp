@@ -9,8 +9,8 @@ import { NewsService } from 'src/app/services/news.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit{
-
   @ViewChild(IonInfiniteScroll,{static:true}) infiniteScroll: IonInfiniteScroll;
+  titulo = 'For you';
 
   public articles: Article[]=[];
   page = 1;

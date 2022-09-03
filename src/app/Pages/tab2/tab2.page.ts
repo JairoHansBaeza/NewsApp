@@ -10,6 +10,7 @@ import { NewsService } from 'src/app/services/news.service';
 })
 export class Tab2Page implements OnInit {
   @ViewChild(IonInfiniteScroll,{static:true}) infiniteScroll: IonInfiniteScroll;
+  titulo = 'Headers';
   page = 1;
   articles: Article[]=[];
   categories: string[] = ['business','entertainment','general','health','science','sports','technology'];
